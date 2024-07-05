@@ -33,5 +33,12 @@ select sum(valor) / 10000 * 100 AS `percentage` from vendas v
 WHERE MONTH(data) = MONTH(CURRENT_DATE())
 AND YEAR(data) = YEAR(CURRENT_DATE()) 
 
+CREATE TABLE erros (
+    id int not null auto_increment,
+    descricao varchar(500),
+    data datetime,
+    PRIMARY KEY (id)
+);
+
 
 
